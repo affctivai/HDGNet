@@ -161,16 +161,6 @@ class HDGNet(nn.Module):
             l_fc (int): the output dimension of a learned linear layer in constructing local adjacent matrix. (defualt: :obj: `1`)
             g_fc (int): the output dimension of a learned linear layer in constructing global adjacent matrix. (defualt: :obj: `1`)
             get_adj (bool): Whether to return the learned local and global adjacency matrix.
-
-
-    这是我的模型代码的第一个版本，此处基于DOGNN的基础上将直接使用62个通道生成62x62的邻接矩阵，改成基于
-    local-graph function生成adjacent matrix，这里主要分两步：
-    1. (lggnn_v1实现的功能) : 在每个local-graph function 内部生成 local adjacent matrix，这里主要是探索complex brain activities inside that local functional area.
-    2. Model2：在针对每个频带进行图卷积后，将每个频带的特征进行融合，再进行一次局部图卷积, 之后再添加全局 (效果不好)
-    3. (lggnn v2实现的功能) : 在针对每个频带进行图卷积后，将每个频带的特征进行融合, 直接进行全局图卷积
-
-
-    4.后期的想法可能会提供多个mask(该mask的数量由类别数来定), 使每个mask之间尽可能不相似
     '''
     def __init__(self,
                  region_mask, region_list,
