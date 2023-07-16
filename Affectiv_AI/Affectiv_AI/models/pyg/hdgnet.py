@@ -161,6 +161,7 @@ class HDGNet(nn.Module):
             l_fc (int): the output dimension of a learned linear layer in constructing local adjacent matrix. (defualt: :obj: `1`)
             g_fc (int): the output dimension of a learned linear layer in constructing global adjacent matrix. (defualt: :obj: `1`)
             get_adj (bool): Whether to return the learned local and global adjacency matrix.
+    1
     '''
     def __init__(self,
                  region_mask, region_list,
