@@ -1,3 +1,6 @@
+
+# Hierarchical Dynamic Local-Global-Graph Representation Learning for EEG Emotion Recognition
+
 # HDGNet
 Hierarchical Dynamic Local-Global-Graph Representation Learning
 
