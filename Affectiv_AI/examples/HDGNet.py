@@ -12,26 +12,26 @@ import torch.nn as nn
 from torch_geometric.loader import DataLoader
 
 
-from Affectiv_AI.datasets import SEEDIVFeatureDataset, SEEDFeatureDataset, SEEDVFeatureDataset, DREAMERDataset
+from torcheeg.datasets import SEEDIVFeatureDataset, SEEDFeatureDataset, SEEDVFeatureDataset, DREAMERDataset
 
-from Affectiv_AI.datasets.constants.emotion_recognition import \
+from torcheeg.datasets.constants.emotion_recognition import \
     SEED_GENERAL_REGION_LIST, SEED_FRONTAL_REGION_LIST, SEED_HEMISPHERE_REGION_LIST, SEED_NEIGHBOR_REGION_LIST, \
     SEED_POSTERIOR_REGION_LIST,\
     SEED_GENERAL_REGION_MASK_MATRIX, SEED_FRONTAL_REGION_MASK_MATRIX, SEED_HEMISPHERE_REGION_MASK_MATRIX, SEED_NEIGHBOR_REGION_MASK_MATRIX, \
     SEED_POSTERIOR_REGION_MASK_MATRIX
 
-from Affectiv_AI.datasets.constants.emotion_recognition import \
+from torcheeg.datasets.constants.emotion_recognition import \
     DREAMER_GENERAL_REGION_LIST, DREAMER_FRONTAL_REGION_LIST, DREAMER_HEMISPHERE_REGION_LIST, DREAMER_NEIGHBOR_REGION_LIST, \
     DREAMER_POSTERIOR_REGION_LIST,\
     DREAMER_GENERAL_REGION_MASK_MATRIX, DREAMER_FRONTAL_REGION_MASK_MATRIX, DREAMER_HEMISPHERE_REGION_MASK_MATRIX, DREAMER_NEIGHBOR_REGION_MASK_MATRIX, \
     DREAMER_POSTERIOR_REGION_MASK_MATRIX
 
-from Affectiv_AI import transforms
-from Affectiv_AI.model_selection import \
+from torcheeg import transforms
+from torcheeg.model_selection import \
     KFoldPerSubjectCrossTrial, Subcategory
-from Affectiv_AI.io import MetaInfoIO
+from torcheeg.io import MetaInfoIO
 
-from Affectiv_AI.models.pyg import HDGNet
+from torcheeg.models.pyg import HDGNet
 
 def arg_parse():
     parser = argparse.ArgumentParser(description='HDGNet')
@@ -68,15 +68,15 @@ def arg_parse():
 
     # the model's parameter setting
     parser.add_argument('--graph_defi', dest='graph_defi',
-                        type=str,help='Select local-global graph definition')
+                        type=str, help='Select local-global graph definition')
     parser.add_argument('--num_electrodes', dest='num_electrodes',
-                        type=int,help='The number of electrodes.')
+                        type=int, help='The number of electrodes.')
     parser.add_argument('--in_channels', dest='in_channels',
-                        type=int,help='The feature dimension of each electrode.')
+                        type=int, help='The feature dimension of each electrode.')
     parser.add_argument('--hid_channels', dest='hid_channels',
-                        type=int,help='The number of hidden nodes in the local GNN layer.')
+                        type=int, help='The number of hidden nodes in the local GNN layer.')
     parser.add_argument('--out_channels', dest='out_channels',
-                        type=int,help='The number of hidden nodes in the global GNN layer.')
+                        type=int, help='The number of hidden nodes in the global GNN layer.')
 
     parser.set_defaults(dataset_name='SEED', ###
                         exper_set='trial_nest',
@@ -198,7 +198,7 @@ def valid(dataloader, model, loss_fn):
 
 
 ###############################################################################
-# Building Deep Learning Pipelines Using Affectiv_AI
+# Building Deep Learning Pipelines Using torcheeg
 if __name__=="__main__":
     args = arg_parse()
 
