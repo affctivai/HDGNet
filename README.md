@@ -5,7 +5,7 @@ Hierarchical Dynamic Local-Global-Graph Representation Learning
 the train file is the Affectiv_AI/examples/HDGNet.py
 
 # reference
-if you not need to split dataset, please add "--Split=True"
+if you not need to split dataset, please add "--Split=False"
 
 SEED
 
