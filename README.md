@@ -1,5 +1,10 @@
-
 # Hierarchical Dynamic Local-Global-Graph Representation Learning for EEG Emotion Recognition
+
+## Dataset
+- SEED: 3 class (neutral, positive, negative)
+- SEED-IV: 4 class (happiness, sadness, fear, neutral)
+- SEED-V: 5 class (disgust, fear, sad, neutral, happy)
+- DREAMER：2 class (valence, arousal)
 
 # HDGNet
 Hierarchical Dynamic Local-Global-Graph Representation Learning
