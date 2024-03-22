@@ -6,7 +6,7 @@ from typing import List, Tuple, Union, Dict
 import numpy as np
 import pandas as pd
 from sklearn import model_selection
-from Affectiv_AI.datasets.module.base_dataset import BaseDataset
+from torcheeg.datasets.module.base_dataset import BaseDataset
 
 
 

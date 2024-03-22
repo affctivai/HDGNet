@@ -7,7 +7,7 @@ from functools import partial
 from multiprocessing import Manager, Pool, Process, Queue
 from typing import Callable, Union
 
-from Affectiv_AI.io import EEGSignalIO, MetaInfoIO
+from torcheeg.io import EEGSignalIO, MetaInfoIO
 from tqdm import tqdm
 
 MAX_QUEUE_SIZE = 1024

@@ -3,7 +3,7 @@ from typing import Callable, Union
 from functools import partial
 import scipy.io as scio
 from multiprocessing import Manager, Pool, Process, Queue
-from Affectiv_AI.io import EEGSignalIO, MetaInfoIO
+from torcheeg.io import EEGSignalIO, MetaInfoIO
 from tqdm import tqdm
 
 MAX_QUEUE_SIZE = 1024

@@ -47,7 +47,7 @@ class SEEDVFeatureDataset(BaseDataset):
         # coresponding baseline signal (torch_geometric.data.Data),
         # label (int)
 
-    In particular, Affectiv_AI utilizes the producer-consumer model to allow multi-process data preprocessing. If your data preprocessing is time consuming, consider increasing :obj:`num_worker` for higher speedup. If running under Windows, please use the proper idiom in the main module:
+    In particular, torcheeg utilizes the producer-consumer model to allow multi-process data preprocessing. If your data preprocessing is time consuming, consider increasing :obj:`num_worker` for higher speedup. If running under Windows, please use the proper idiom in the main module:
 
     .. code-block:: python
 

@@ -8,7 +8,7 @@ from typing import Callable, Dict, List, Union, Any
 from tqdm import tqdm
 from multiprocessing import Manager, Pool, Process, Queue
 
-from Affectiv_AI.io import EEGSignalIO, MetaInfoIO
+from torcheeg.io import EEGSignalIO, MetaInfoIO
 
 
 MAX_QUEUE_SIZE = 1024
