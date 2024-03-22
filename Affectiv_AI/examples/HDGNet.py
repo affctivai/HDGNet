@@ -89,7 +89,7 @@ def arg_parse():
                         threshold=0.0, ### DRE
                         emotion_key='', ### DRE
                         random_seed=42,
-                        Split=False,
+                        Split=True,
                         n_outer=5, ###
                         n_inner=2, ###
                         graph_defi='POSTERIOR', ####
@@ -263,7 +263,7 @@ if __name__=="__main__":
     else:
         raise ValueError("Please use existing dataset or adding new code to deal new dataset")
 
-    if not args.Split:
+    if args.Split:
         if args.dataset_name == 'SEED':
             # Here we do not consider the impact of cross-session on the test results. Therefore, we first mark the session index on the sample according to the collection date. Next, we use :obj:`Subcategory` to divide the data set to obtain the sub-data set of the first session, the second session and the third session.
             # add the session information, SEED need this step when do the session split
