@@ -10,8 +10,8 @@
 HDGNet.py
 |          | dataset object         | Seg (channels, window)| Seg + DE (channels, bands) | Seg + PSD (channels,  bands) | Feature origin |
 |----------|------------------------|-----------------------|----------------------------|----------------------------- |--------------- |
-| SEED     | SEEDFeatureDataset()   |                       | (62, 5)                     |                             | public      |
-| SEED-IV  | SEEDIVFeatureDataset() |                       | (62, 5)                     |                              | public        |
+| SEED     | SEEDFeatureDataset()   |          -            | (62, 5)                     |        -                   | public      |
+| SEED-IV  | SEEDIVFeatureDataset() |        -              | (62, 5)                     |      -                      | public        |
 | SEED-V   | SEEDVFeatureDataset()  |                       | (62, 5)                     |                             | public        |
 | DREAMER  | DREAMERDataset()       | (14, 256)             | (14, 4)                     | (14, 3)                      | private       |
 
