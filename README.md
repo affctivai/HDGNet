@@ -6,6 +6,16 @@
 - SEED-V: 5 class (disgust, fear, sad, neutral, happy)
 - DREAMER：2 class (valence, arousal)
 
+## Load Dataset (Offline Transform, Feature Extraction ...)
+HDGNet.py
+|          | dataset object         | Seg (channels, window)| Seg + DE (channels, bands) | Seg + PSD (channels,  bands) | Feature origin |
+| SEED     | SEEDFeatureDataset()   |-----------------------| (62, 5)                     |  ----------------------------- | public        |
+| SEED-IV  | SEEDIVFeatureDataset() |-----------------------| (62, 5)                     | -----------------------------| public        |
+| SEED-V   | SEEDVFeatureDataset()  |-----------------------| (62, 5)                     | -----------------------------| public        |
+| DREAMER  | DREAMERDataset()       | (14, 256)             | (14, 4)                     | (14, 3)                      | private       |
+
+
+
 # HDGNet
 Hierarchical Dynamic Local-Global-Graph Representation Learning
 
