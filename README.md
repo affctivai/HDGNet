@@ -6,6 +6,8 @@
 - SEED-V: 5 class (disgust, fear, sad, neutral, happy)
 - DREAMER：2 class (valence, arousal)
 
+<hr style="border-top: 3px solid black;">
+
 ### Load Dataset (Offline Transform, Feature Extraction ...)
 HDGNet.py
 - Segmentation (Raw Signal)
@@ -32,6 +34,7 @@ train and test data are split by nest cross validation method for reliable gener
 | inner loop|   2     |  2      |     2    |  3      |
 | outer loop|   5     |  3      |     3    |  3      |
 
+<hr style="border-top: 3px solid black;">
 
 ## Our Method
 
