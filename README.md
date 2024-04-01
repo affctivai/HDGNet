@@ -25,6 +25,7 @@ HDGNet.py
 EEG channels(num_electrodes), Segment size(Window size)
 Feature origin：public（the public feature provided by dataset） and private (features extracted by this code )
 
+## Load Dataset (Offline Transform, Feature Extraction ...)
 
 # HDGNet
 Hierarchical Dynamic Local-Global-Graph Representation Learning
