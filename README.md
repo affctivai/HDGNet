@@ -8,6 +8,9 @@
 
 ## Load Dataset (Offline Transform, Feature Extraction ...)
 HDGNet.py
+- Segmentation (Raw Signal)
+- Segmentation + DE (Differential Entropy)
+- Segmentation + PSD (Power Spectral Density)
 
 |          | dataset object         | Seg (channels, window)| Seg + DE (channels, bands) | Seg + PSD (channels,  bands) | Feature origin |
 |----------|------------------------|-----------------------|----------------------------|----------------------------- |--------------- |
