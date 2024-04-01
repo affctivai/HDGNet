@@ -6,7 +6,7 @@
 - SEED-V: 5 class (disgust, fear, sad, neutral, happy)
 - DREAMER：2 class (valence, arousal)
 
-## Load Dataset (Offline Transform, Feature Extraction ...)
+### Load Dataset (Offline Transform, Feature Extraction ...)
 HDGNet.py
 - Segmentation (Raw Signal)
 - Segmentation + DE (Differential Entropy)
@@ -25,7 +25,15 @@ HDGNet.py
 EEG channels(num_electrodes), Segment size(Window size)
 Feature origin：public（the public feature provided by dataset） and private (features extracted by this code )
 
-## Load Dataset (Offline Transform, Feature Extraction ...)
+### Split Dataset
+train and test data are split by nest cross validation method for reliable generalization evaluation.
+|           |SEED     | SEED-IV |  SEED-V  | DREAMER |
+|-----------|---------|---------|----------|---------|
+| inner loop|   2     |  2      |     2    |  3      |
+| outer loop|   5     |  3      |     3    |  3      |
+
+
+## Our Method
 
 # HDGNet
 Hierarchical Dynamic Local-Global-Graph Representation Learning
