@@ -8,13 +8,18 @@
 
 ## Load Dataset (Offline Transform, Feature Extraction ...)
 HDGNet.py
+- Segmentation (Raw Signal)
+- Segmentation + DE (Differential Entropy)
+- Segmentation + PSD (Power Spectral Density)
 |          | dataset object         | Seg (channels, window)| Seg + DE (channels, bands) | Seg + PSD (channels,  bands) | Feature origin |
 |----------|------------------------|-----------------------|----------------------------|----------------------------- |--------------- |
 | SEED     | SEEDFeatureDataset()   |          -            | (62, 5)                     |        -                    | public      |
 | SEED-IV  | SEEDIVFeatureDataset() |        -              | (62, 5)                     |      -                      | public        |
 | SEED-V   | SEEDVFeatureDataset()  |           -            | (62, 5)                     |      -                       | public        |
-| DREAMER  | DREAMERDataset()       | (14, 256)             | -                           | (14, 3)                      | private       |
+| DREAMER  | DREAMERDataset()       | (14, 128)             | -                           | (14, 3)                      | private       |
 
+EEG channels(num_electrodes), Segment size(Window size)
+Feature origin：public（the public feature provided by dataset） and private (features extracted by this code )
 
 
 # HDGNet
