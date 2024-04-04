@@ -13,7 +13,7 @@
 - SEEDIVFeatureDataset()
 - SEEDVFeatureDataset()
 - DREAMERDataset()
-- All Dataset loading method are based and extended on TorchEEG : https://github.com/torcheeg/torcheeg
+ All Dataset loading method are based and extended on TorchEEG : https://github.com/torcheeg/torcheeg
 
 - Segmentation (Raw Signal)
 - Segmentation + DE (Differential Entropy)
