@@ -1,3 +1,46 @@
+# Hierarchical Dynamic Local-Global-Graph Representation Learning for EEG Emotion Recognition
+
+## Dataset
+- SEED: 3 class (neutral, positive, negative)
+- SEED-IV: 4 class (happiness, sadness, fear, neutral)
+- SEED-V: 5 class (disgust, fear, sad, neutral, happy)
+- DREAMER：2 class (valence, arousal)
+
+<hr style="border-top: 3px solid black;">
+
+### Load Dataset (Offline Transform, Feature Extraction ...)
+HDGNet.py
+- Segmentation (Raw Signal)
+- Segmentation + DE (Differential Entropy)
+- Segmentation + PSD (Power Spectral Density)
+
+|          | dataset object         | Seg (channels, window)| Seg + DE (channels, bands) | Seg + PSD (channels,  bands) | Feature origin |
+|----------|------------------------|-----------------------|----------------------------|----------------------------- |--------------- |
+| SEED     | SEEDFeatureDataset()   |          -            | (62, 5)                     |        -                    | public      |
+| SEED-IV  | SEEDIVFeatureDataset() |        -              | (62, 5)                     |      -                      | public        |
+| SEED-V   | SEEDVFeatureDataset()  |           -            | (62, 5)                     |      -                       | public        |
+| DREAMER  | DREAMERDataset()       | (14, 128)             | -                           | (14, 3)                      | private       |
+
+- Segmentation (Raw Signal)
+- Segmentation + DE (Differential Entropy)
+- Segmentation + PSD (Power Spectral Density)
+EEG channels(num_electrodes), Segment size(Window size)
+Feature origin：public（the public feature provided by dataset） and private (features extracted by this code )
+
+### Split Dataset
+train and test data are split by nest cross validation method for reliable generalization evaluation.
+|           |SEED     | SEED-IV |  SEED-V  | DREAMER |
+|-----------|---------|---------|----------|---------|
+| inner loop|   2     |  2      |     2    |  3      |
+| outer loop|   5     |  3      |     3    |  3      |
+
+<hr style="border-top: 3px solid black;">
+
+## Our Method
+
+
+
+
 # HDGNet
 Hierarchical Dynamic Local-Global-Graph Representation Learning
 
@@ -5,7 +48,7 @@ Hierarchical Dynamic Local-Global-Graph Representation Learning
 the train file is the Affectiv_AI/examples/HDGNet.py
 
 # reference
-if you not need to split dataset, please add "--Split=True"
+if you not need to split dataset, please add "--Split=False"
 
 SEED
 
