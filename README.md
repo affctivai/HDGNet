@@ -27,10 +27,8 @@
 | SEED-V   | SEEDVFeatureDataset()  |           -            | (62, 5)                     |      -                       | public        |
 | DREAMER  | DREAMERDataset()       | (14, 128)             | -                           | (14, 3)                      | private       |
 
-- Segmentation (Raw Signal)
-- Segmentation + DE (Differential Entropy)
-- Segmentation + PSD (Power Spectral Density)
 EEG channels(num_electrodes), Segment size(Window size)
+
 Feature origin：public（the public feature provided by dataset） and private (features extracted by this code )
 
 ### Split Dataset
