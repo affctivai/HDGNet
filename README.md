@@ -41,6 +41,10 @@ train and test data are split by nest cross validation method for reliable gener
 
 
 
+
+## Results
+![Results](/src/result.png)
+
 # HDGNet
 Hierarchical Dynamic Local-Global-Graph Representation Learning
 
