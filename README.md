@@ -9,7 +9,12 @@
 <hr style="border-top: 3px solid black;">
 
 ### Load Dataset (Offline Transform, Feature Extraction ...)
-HDGNet.py
+SEEDFeatureDataset()
+SEEDIVFeatureDataset()
+SEEDVFeatureDataset()
+DREAMERDataset()
+All Dataset loading method are based and extended on TorchEEG : https://github.com/torcheeg/torcheeg
+
 - Segmentation (Raw Signal)
 - Segmentation + DE (Differential Entropy)
 - Segmentation + PSD (Power Spectral Density)
