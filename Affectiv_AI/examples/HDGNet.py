@@ -78,25 +78,25 @@ def arg_parse():
     parser.add_argument('--out_channels', dest='out_channels',
                         type=int, help='The number of hidden nodes in the global GNN layer.')
 
-    parser.set_defaults(dataset_name='SEED', ###
+    parser.set_defaults(dataset_name='SEED',
                         exper_set='trial_nest',
                         model_name='examples_HDGNet',
                         lr=3e-4,
                         batch_size=200,
                         epochs=200,
-                        num_classes=3,###
+                        num_classes=3,
                         num_workers=0,
-                        threshold=0.0, ### DRE
-                        emotion_key='', ### DRE
+                        threshold=0.0,
+                        emotion_key='',
                         random_seed=42,
                         Split=True,
-                        n_outer=5, ###
-                        n_inner=2, ###
-                        graph_defi='POSTERIOR', ####
-                        num_electrodes=62, ###
-                        in_channels=5, ###
-                        hid_channels=5, ###
-                        out_channels=10 ###
+                        n_outer=5,
+                        n_inner=2,
+                        graph_defi='POSTERIOR',
+                        num_electrodes=62,
+                        in_channels=5,
+                        hid_channels=5,
+                        out_channels=10
         )
     return parser.parse_args()
 
