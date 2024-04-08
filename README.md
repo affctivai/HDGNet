@@ -64,7 +64,7 @@ python -m HDGNet --dataset_name=SEED --num_classes=3 --n_outer=5 --n_inner=2 --g
 ```python
 python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotion_key=valence --n_outer=3 --n_inner=3 --graph_defi=GENERAL --num_electrodes=14 --in_channels=3 --hid_channels=3 --out_channels=3
 ```
-
+the  "GENERAL" in the "graph_defi=GENERAL" can be replaced with "FRONTAL", "HEMISPHERE", "NEIGHBOR", "POSTERIOR", then you can use the other four graph definitions.
 
 ### Required dependencies
 - python = 3.
@@ -75,8 +75,29 @@ python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotio
 Please place the public dataset in the "..\HDGNet\Affectiv_AI\examples\tmp_in" folder.
 
 ### Code demo
-代码样例
 Please make sure you have followed the steps in the before(加上章节), and go into the directory where the code and required datasets are stored. Moreover, make sure you have installed the required dependencies described in the previous subsection.
+
+SEED
+
+python -m HDGNet --dataset_name=SEED --num_classes=3 --n_outer=5 --n_inner=2 --graph_defi=POSTERIOR
+
+SEED-IV
+
+python -m HDGNet --dataset_name=SEED-IV --num_classes=4 --n_outer=3 --n_inner=2 --graph_defi=POSTERIOR
+
+SEED-V
+
+python -m HDGNet --dataset_name=SEED-V --num_classes=5 --n_outer=3 --n_inner=2 --graph_defi=POSTERIOR
+
+DREAMER
+
+valance
+
+python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotion_key=valence --n_outer=3 --n_inner=3 --graph_defi=POSTERIOR --num_electrodes=14 --in_channels=3 --hid_channels=3 --out_channels=3
+
+arousal
+
+python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotion_key=arousal --n_outer=3 --n_inner=3 --graph_defi=POSTERIOR --num_electrodes=14 --in_channels=3 --hid_channels=3 --out_channels=3
 
 
 ## Results
