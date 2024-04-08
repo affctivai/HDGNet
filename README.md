@@ -71,17 +71,28 @@ python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotio
 - mne =
 - numpy =
 
+### Dataset storage
+Please place the public dataset in the "..\HDGNet\Affectiv_AI\examples\tmp_in" folder.
+
 ### Code demo
 代码样例
+Please make sure you have followed the steps in the before(加上章节), and go into the directory where the code and required datasets are stored. Moreover, make sure you have installed the required dependencies described in the previous subsection.
+
 
 ## Results
 ![Results](/src/result.png)
+
+
+
+
 
 # HDGNet
 Hierarchical Dynamic Local-Global-Graph Representation Learning
 
 # Train
-the train file is the Affectiv_AI/examples/HDGNet.py
+- 
+- the train file is the Affectiv_AI/examples/HDGNet.py
+
 
 # reference
 if you not need to split dataset, please add "--Split=False"
