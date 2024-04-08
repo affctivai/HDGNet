@@ -45,8 +45,23 @@ train and test data are split by nest cross validation method for reliable gener
 
 ### 1) Five local-global-graph definitions
 ![Our Method](/src/local_global_map.png)
-- For each graph definition, we need to predefine for each dataset.
-- 
+
+For the SEED, SEED-IV, and SEED-V datasets, which are all 62-channel datasets, the same mask matrix and region list are used in the code.The DREAMER dataset uses another set of  mask matrix and region list.
+Let's take the General graph definition as an example
+
+|          | mask matrix         | region list| 
+|----------|------------------------|-----------------------|
+| SEED     | SEED_GENERAL_REGION_MASK_MATRIX    | SEED_GENERAL_REGION_LIST | 
+| SEED-IV  | SEED_GENERAL_REGION_MASK_MATRIX    | SEED_GENERAL_REGION_LIST |
+| SEED-V   | SEED_GENERAL_REGION_MASK_MATRIX    |  SEED_GENERAL_REGION_LIST | 
+| DREAMER  | DREAMER_GENERAL_REGION_MASK_MATRIX | DREAMER_GENERAL_REGION_LIST  |
+
+For each graph definition, we need to predefine for each dataset. For example, we run the code on the SEED dataset using the General graph definition method.
+'''
+python -m HDGNet --dataset_name=SEED --num_classes=3 --n_outer=5 --n_inner=2 --graph_defi=GENERAL
+'''
+
+
 
 ### Required dependencies
 - python = 3.
