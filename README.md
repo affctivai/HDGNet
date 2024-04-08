@@ -45,7 +45,16 @@ train and test data are split by nest cross validation method for reliable gener
 
 ### 1) Five local-global-graph definitions
 ![Our Method](/src/local_global_map.png)
+- For each graph definition, we need to predefine for each dataset.
+- 
 
+### Required dependencies
+- python = 3.
+- mne =
+- numpy =
+
+### Code demo
+代码样例
 
 ## Results
 ![Results](/src/result.png)
