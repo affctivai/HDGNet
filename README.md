@@ -72,7 +72,7 @@ the  "GENERAL" in the "graph_defi=GENERAL" can be replaced with "FRONTAL", "HEMI
 - numpy =
 
 ### Dataset storage
-Please place the public dataset in the "..\HDGNet\Affectiv_AI\examples\tmp_in" folder.
+Please place the public dataset in the folder of "..\HDGNet\Affectiv_AI\examples\tmp_in".
 
 ### Code demo
 Please make sure you have followed the steps in the before(加上章节), and go into the directory where the code and required datasets are stored. Moreover, make sure you have installed the required dependencies described in the previous subsection.
@@ -106,6 +106,7 @@ python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotio
 
 
 ## Results
+The output result is in the folder of "..\HDGNet\Affectiv_AI\examples\tmp_out".
 ![Results](/src/result.png)
 
 
