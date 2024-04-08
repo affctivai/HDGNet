@@ -44,7 +44,7 @@ train and test data are split by nest cross validation method for reliable gener
 ![Our Method](/src/model_graph.png)
 
 ### 1) Five local-global-graph definitions
-![Our Method](/src/model_graph.png)
+![Our Method](/src/local_global_map.png)
 
 
 ## Results
