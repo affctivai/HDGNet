@@ -61,7 +61,7 @@ For each graph definition, we need to predefine for each dataset. For example, w
 ```python
 python -m HDGNet --dataset_name=SEED --num_classes=3 --n_outer=5 --n_inner=2 --graph_defi=GENERAL
 ```
- we run the code on the SEED dataset using the General graph definition method. 
+ we run the code on the DREAMER dataset using the General graph definition method. 
 ```python
 python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotion_key=valence --n_outer=3 --n_inner=3 --graph_defi=GENERAL --num_electrodes=14 --in_channels=3 --hid_channels=3 --out_channels=3
 ```
