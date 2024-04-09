@@ -90,7 +90,11 @@ Type ```pip install -r environment.txt``` at the command line and it will automa
 
 Moreover, you also need to install the pytorch Geometric (Pyg), I recommend you to use ```conda install pyg -c pyg```.
 
-
+Another thing you need to be aware of is you need to tell the Python interpreter that this directory is the root of your source code by setting the environment variable by follow code：
+```
+windows: set PYTHONPATH=your_directory/Affectiv_AI/;%PYTHONPATH%
+linux: export PYTHONPATH=your_directory/Affectiv_AI/:$PYTHONPATH
+```
 
 ### Dataset storage
 Please place the public dataset in the folder of "..\HDGNet\Affectiv_AI\examples\tmp_in".
