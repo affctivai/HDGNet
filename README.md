@@ -68,6 +68,8 @@ python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotio
 the  "GENERAL" in the "graph_defi=GENERAL" can be replaced with "FRONTAL", "HEMISPHERE", "NEIGHBOR", "POSTERIOR", then you can use the other four graph definitions.
 
 ### Required dependencies
+you can copy follow sentence into a txt file "environment.txt",
+
 ```
 h5py==3.7.0
 joblib==1.1.1
@@ -80,6 +82,7 @@ torch_scatter==2.0.9
 torchmetrics==1.3.2
 tqdm==4.64.1
 ```
+Type ```pip install -r environment.txt``` at the command line and it will automatically pip install all packages listed in the environment.txt file.
 
 
 ### Dataset storage
