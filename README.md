@@ -68,6 +68,13 @@ python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotio
 the  "GENERAL" in the "graph_defi=GENERAL" can be replaced with "FRONTAL", "HEMISPHERE", "NEIGHBOR", "POSTERIOR", then you can use the other four graph definitions.
 
 ### Required dependencies
+create environment
+```
+conda create -n eegpython3.7 python=3.7
+conda install pytorch==1.11.0 torchvision torchaudio cudatoolkit=11.3 -c pytorch
+```
+
+
 you can copy follow sentence into a txt file "environment.txt",
 
 ```
@@ -77,12 +84,11 @@ lmdb==1.3.0
 pandas==1.3.5
 scikit_learn==1.0.2
 scipy==1.7.3
-torch_geometric==2.1.0.post1
-torch_scatter==2.0.9
-torchmetrics==1.3.2
 tqdm==4.64.1
 ```
 Type ```pip install -r environment.txt``` at the command line and it will automatically pip install all packages listed in the environment.txt file.
+when you install the pytorch Geometric (Pyg), you can use '''conda install pyg -c pyg'''
+
 
 
 ### Dataset storage
