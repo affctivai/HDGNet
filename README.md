@@ -87,7 +87,8 @@ scipy==1.7.3
 tqdm==4.64.1
 ```
 Type ```pip install -r environment.txt``` at the command line and it will automatically pip install all packages listed in the environment.txt file.
-when you install the pytorch Geometric (Pyg), you can use '''conda install pyg -c pyg'''
+
+Moreover, you also need to install the pytorch Geometric (Pyg), I recommend you to use ```conda install pyg -c pyg```.
 
 
 
