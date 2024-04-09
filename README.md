@@ -88,6 +88,8 @@ Please place the public dataset in the folder of "..\HDGNet\Affectiv_AI\examples
 ### Code demo
 Please make sure you have followed the steps in the before, and go into the directory where the code and required datasets are stored. Moreover, make sure you have installed the required dependencies described in the previous subsection.
 
+Then, you need to go to the directory where the HDGNet.py file is located. 
+
 Some examples.
 
 SEED
