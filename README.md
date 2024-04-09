@@ -86,7 +86,7 @@ tqdm==4.64.1
 Please place the public dataset in the folder of "..\HDGNet\Affectiv_AI\examples\tmp_in".
 
 ### Code demo
-Please make sure you have followed the steps in the before(加上章节), and go into the directory where the code and required datasets are stored. Moreover, make sure you have installed the required dependencies described in the previous subsection.
+Please make sure you have followed the steps in the before, and go into the directory where the code and required datasets are stored. Moreover, make sure you have installed the required dependencies described in the previous subsection.
 
 Some examples.
 
