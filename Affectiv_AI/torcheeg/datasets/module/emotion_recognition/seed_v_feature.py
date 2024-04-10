@@ -16,11 +16,7 @@ class SEEDVFeatureDataset(BaseDataset):
     - Reference: Li T H, Lu B L. Classification of Five Emotions from EEG and Eye Movement Signals: Discrimination Ability and Stability over Time[C]. 2019 9th International IEEE/EMBS Conference on Neural Engineering (NER). 2019: 607-610
     - Stimulus: 45 film clips
     - Signals: Electroencephalogram (62 channels at 200Hz) and eye movement data of 16 subjects (10 females). Each subject conducts the experiments in three sessions, and each session contains 15 trials (3 per emotional category) totally 16 people x 3 sessions x 15 trials.
-    - Rating: disgus
-
-
-
-    t (0), fear (1), sad (2), and neutral (3), happy(4).
+    - Rating: disgust (0), fear (1), sad (2), and neutral (3), happy(4).
     - Features: de_LDS of 4-second long windows, no overlapping Hanning window
 
     In order to use this dataset, the download folder :obj:`EEG_DE_features` is required, containing the following folder:
@@ -47,7 +43,7 @@ class SEEDVFeatureDataset(BaseDataset):
         # coresponding baseline signal (torch_geometric.data.Data),
         # label (int)
 
-    In particular, Affectiv_AI utilizes the producer-consumer model to allow multi-process data preprocessing. If your data preprocessing is time consuming, consider increasing :obj:`num_worker` for higher speedup. If running under Windows, please use the proper idiom in the main module:
+    In particular, torcheeg utilizes the producer-consumer model to allow multi-process data preprocessing. If your data preprocessing is time consuming, consider increasing :obj:`num_worker` for higher speedup. If running under Windows, please use the proper idiom in the main module:
 
     .. code-block:: python
 

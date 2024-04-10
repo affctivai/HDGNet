@@ -12,26 +12,26 @@ import torch.nn as nn
 from torch_geometric.loader import DataLoader
 
 
-from Affectiv_AI.datasets import SEEDIVFeatureDataset, SEEDFeatureDataset, SEEDVFeatureDataset, DREAMERDataset
+from torcheeg.datasets import SEEDIVFeatureDataset, SEEDFeatureDataset, SEEDVFeatureDataset, DREAMERDataset
 
-from Affectiv_AI.datasets.constants.emotion_recognition import \
+from torcheeg.datasets.constants.emotion_recognition import \
     SEED_GENERAL_REGION_LIST, SEED_FRONTAL_REGION_LIST, SEED_HEMISPHERE_REGION_LIST, SEED_NEIGHBOR_REGION_LIST, \
     SEED_POSTERIOR_REGION_LIST,\
     SEED_GENERAL_REGION_MASK_MATRIX, SEED_FRONTAL_REGION_MASK_MATRIX, SEED_HEMISPHERE_REGION_MASK_MATRIX, SEED_NEIGHBOR_REGION_MASK_MATRIX, \
     SEED_POSTERIOR_REGION_MASK_MATRIX
 
-from Affectiv_AI.datasets.constants.emotion_recognition import \
+from torcheeg.datasets.constants.emotion_recognition import \
     DREAMER_GENERAL_REGION_LIST, DREAMER_FRONTAL_REGION_LIST, DREAMER_HEMISPHERE_REGION_LIST, DREAMER_NEIGHBOR_REGION_LIST, \
     DREAMER_POSTERIOR_REGION_LIST,\
     DREAMER_GENERAL_REGION_MASK_MATRIX, DREAMER_FRONTAL_REGION_MASK_MATRIX, DREAMER_HEMISPHERE_REGION_MASK_MATRIX, DREAMER_NEIGHBOR_REGION_MASK_MATRIX, \
     DREAMER_POSTERIOR_REGION_MASK_MATRIX
 
-from Affectiv_AI import transforms
-from Affectiv_AI.model_selection import \
+from torcheeg import transforms
+from torcheeg.model_selection import \
     KFoldPerSubjectCrossTrial, Subcategory
-from Affectiv_AI.io import MetaInfoIO
+from torcheeg.io import MetaInfoIO
 
-from Affectiv_AI.models.pyg import HDGNet
+from torcheeg.models.pyg import HDGNet
 
 def arg_parse():
     parser = argparse.ArgumentParser(description='HDGNet')
@@ -68,35 +68,35 @@ def arg_parse():
 
     # the model's parameter setting
     parser.add_argument('--graph_defi', dest='graph_defi',
-                        type=str,help='Select local-global graph definition')
+                        type=str, help='Select local-global graph definition')
     parser.add_argument('--num_electrodes', dest='num_electrodes',
-                        type=int,help='The number of electrodes.')
+                        type=int, help='The number of electrodes.')
     parser.add_argument('--in_channels', dest='in_channels',
-                        type=int,help='The feature dimension of each electrode.')
+                        type=int, help='The feature dimension of each electrode.')
     parser.add_argument('--hid_channels', dest='hid_channels',
-                        type=int,help='The number of hidden nodes in the local GNN layer.')
+                        type=int, help='The number of hidden nodes in the local GNN layer.')
     parser.add_argument('--out_channels', dest='out_channels',
-                        type=int,help='The number of hidden nodes in the global GNN layer.')
+                        type=int, help='The number of hidden nodes in the global GNN layer.')
 
-    parser.set_defaults(dataset_name='SEED', ###
+    parser.set_defaults(dataset_name='SEED',
                         exper_set='trial_nest',
                         model_name='examples_HDGNet',
                         lr=3e-4,
                         batch_size=200,
                         epochs=200,
-                        num_classes=3,###
+                        num_classes=3,
                         num_workers=0,
-                        threshold=0.0, ### DRE
-                        emotion_key='', ### DRE
+                        threshold=0.0,
+                        emotion_key='',
                         random_seed=42,
-                        Split=False,
-                        n_outer=5, ###
-                        n_inner=2, ###
-                        graph_defi='POSTERIOR', ####
-                        num_electrodes=62, ###
-                        in_channels=5, ###
-                        hid_channels=5, ###
-                        out_channels=10 ###
+                        Split=True,
+                        n_outer=5,
+                        n_inner=2,
+                        graph_defi='POSTERIOR',
+                        num_electrodes=62,
+                        in_channels=5,
+                        hid_channels=5,
+                        out_channels=10
         )
     return parser.parse_args()
 
@@ -198,7 +198,7 @@ def valid(dataloader, model, loss_fn):
 
 
 ###############################################################################
-# Building Deep Learning Pipelines Using Affectiv_AI
+# Building Deep Learning Pipelines Using torcheeg
 if __name__=="__main__":
     args = arg_parse()
 
@@ -263,7 +263,7 @@ if __name__=="__main__":
     else:
         raise ValueError("Please use existing dataset or adding new code to deal new dataset")
 
-    if not args.Split:
+    if args.Split:
         if args.dataset_name == 'SEED':
             # Here we do not consider the impact of cross-session on the test results. Therefore, we first mark the session index on the sample according to the collection date. Next, we use :obj:`Subcategory` to divide the data set to obtain the sub-data set of the first session, the second session and the third session.
             # add the session information, SEED need this step when do the session split

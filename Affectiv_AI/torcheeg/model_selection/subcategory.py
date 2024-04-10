@@ -4,7 +4,7 @@ from copy import copy
 from typing import Tuple, Dict
 
 import pandas as pd
-from Affectiv_AI.datasets.module.base_dataset import BaseDataset
+from torcheeg.datasets.module.base_dataset import BaseDataset
 
 
 class Subcategory:
