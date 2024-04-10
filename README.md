@@ -67,7 +67,7 @@ python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotio
 ```
 the  "GENERAL" in the "graph_defi=GENERAL" can be replaced with "FRONTAL", "HEMISPHERE", "NEIGHBOR", "POSTERIOR", then you can use the other four graph definitions.
 
-### Required dependencies
+### 2) Required dependencies
 create environment
 ```
 conda create -n eegpython3.7 python=3.7
@@ -96,11 +96,11 @@ windows: set PYTHONPATH=your_directory/Affectiv_AI/;%PYTHONPATH%
 linux: export PYTHONPATH=your_directory/Affectiv_AI/:$PYTHONPATH
 ```
 
-### Dataset storage
+### 3) Dataset storage
 Please place the public dataset in the folder of "..\HDGNet\Affectiv_AI\examples\tmp_in".
 
-### Code demo
-Please make sure you have followed the steps in the before, and go into the directory where the code and required datasets are stored. Moreover, make sure you have installed the required dependencies described in the previous subsection.
+### 4) Code demo
+Please make sure you have followed the steps in the 2) and 3) to finsih the installation of required dependencies and datasets storage. 
 
 Then, you need to go to the directory where the HDGNet.py file is located. 
 
