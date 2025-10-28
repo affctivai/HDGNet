@@ -133,6 +133,7 @@ python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotio
 
 
 ## Results
-![Results](/src/result.png)
+![Results](/src/result1.png)
+![Results](/src/result2.png)
 
 The output result is in the folder of "..\HDGNet\Affectiv_AI\examples\tmp_out".
