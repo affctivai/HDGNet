@@ -1,4 +1,9 @@
-# Hierarchical Dynamic Local-Global-Graph Representation Learning for EEG Emotion Recognition
+# Hierarchical Dynamic Local-Global-Graph Representation Learning for EEG Emotion Recognition (HDGNet)
+This repository provides the official implementation of HDGNet, introduced in our paper:
+
+Hanyu Li and Byung Hyung Kim, "Hierarchical Dynamic Local-Global-Graph Representation Learning for EEG Emotion Recognition," IEEE Transactions on Instrumentation and Measurement, 2025. 
+
+HDGNet is a hierarchical dynamic graph learning framework that models local and global brain interactions to capture emotion-related patterns across multiple scales effectively.
 
 ## Dataset
 - SEED: 3 class (neutral, positive, negative)
