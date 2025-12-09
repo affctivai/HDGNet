@@ -1,7 +1,7 @@
 # Hierarchical Dynamic Local-Global-Graph Representation Learning for EEG Emotion Recognition (HDGNet)
 This repository provides the official implementation of HDGNet, introduced in our paper:
 
-Hanyu Li and Byung Hyung Kim, "Hierarchical Dynamic Local-Global-Graph Representation Learning for EEG Emotion Recognition," IEEE Transactions on Instrumentation and Measurement, 2025. [[pdf]](https://drive.google.com/file/d/1BdURYRfLr4f76BFdP9H90GDyeu8pptzB) [[link]](https://ieeexplore.ieee.org/document/11262248)
+Hanyu Li and Byung Hyung Kim, "Hierarchical Dynamic Local-Global-Graph Representation Learning for EEG Emotion Recognition," IEEE Transactions on Instrumentation and Measurement, vol.74, 2025. [[pdf]](https://drive.google.com/file/d/1BdURYRfLr4f76BFdP9H90GDyeu8pptzB) [[link]](https://ieeexplore.ieee.org/document/11262248)
 
 HDGNet is a hierarchical dynamic graph learning framework that models local and global brain interactions to capture emotion-related patterns across multiple scales effectively.
 
@@ -142,3 +142,18 @@ python -m HDGNet --dataset_name=DREAMER --num_classes=2 --threshold=4.0 --emotio
 ![Results](/src/result2.png)
 
 The output result is in the folder of "..\HDGNet\Affectiv_AI\examples\tmp_out".
+
+# Cite
+
+Please cite our paper if you use our code in your own work:
+```
+@article{li2025hdgnet,
+  title={Hierarchical Dynamic Local-Global-Graph Representation Learning for EEG Emotion Recognition},
+  author={Li, Hanyu and Kim, Byung Hyung},
+  journal={IEEE Transactions on Instrumentation and Measurement},
+  volume={74},
+  year={2025}
+  
+}
+
+```
